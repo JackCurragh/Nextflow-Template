@@ -42,7 +42,7 @@ sudo singularity build singularity/<name of output container> <dockerfile>
 
 Docker
 ```
-docker build .
+docker build . -t pipeline-image
 ```
 
 Conda 

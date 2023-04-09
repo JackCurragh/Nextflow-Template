@@ -46,9 +46,7 @@ docker build . -t pipeline-image
 ```
 
 Conda 
-```
-
-```
+Create a conda definition yaml file [eg. here](conda/example.yml)
 
 ## Usage
 Call the pipeline directly

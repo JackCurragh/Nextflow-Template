@@ -14,6 +14,9 @@ This template has been informed by many other Nextflow pipelines and templates. 
 tower.nf allows GUI tracking of workflow progress
 Set it up using the instructions [here](https://help.tower.nf/22.4/getting-started/usage/#nextflow-with-tower)
 
+<br>
+<br>
+<br>
 #### <b>Delete Everything Above</b>
 
 # Template README
@@ -22,6 +25,43 @@ Set it up using the instructions [here](https://help.tower.nf/22.4/getting-start
 # <PIPELINE NAME>
 ## Introduction 
 
+## Requirements 
+This pipeline can be run using each of the following container methods
+| Method      | Instructions                                                                                   |
+| ----------- | ---------------------------------------------------------------------------------------------- |
+| Singularity | [docs.syslabs.io](https://docs.sylabs.io/guides/3.0/user-guide/installation.html)              |
+| Docker      | [docs.docker.com](https://docs.docker.com/engine/install/)                                     |
+| Conda       | [docs.conda.io](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)  |
+
+
 ## Setup
+Singularity
+```
+sudo singularity build singularity/<name of output container> <dockerfile>
+```
+
+Docker
+```
+docker build .
+```
+
+Conda 
+```
+
+```
 
 ## Usage
+Call the pipeline directly
+```
+nextflow run main.nf
+```
+
+Run with all the frills
+```
+bash run-w-frills <params-file.config> <profile name from nextflow.config>
+```
+Example
+```
+bash run-w-frills params.config docker
+```
+

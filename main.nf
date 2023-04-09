@@ -21,7 +21,7 @@ log.info """\
 
 """
 // Help Message to prompt users to specify required parameters
-def helpMessage() {
+def help() {
     log.info"""
   Usage:  nextflow run main.nf --input <path_to_fastq_dir> 
 

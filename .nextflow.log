@@ -1,0 +1,6 @@
+Apr-09 08:58:45.742 [main] DEBUG nextflow.cli.Launcher - $> nextflow run
+Apr-09 08:58:45.772 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+nextflow.exception.AbortOperationException: No project name was specified
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:268)
+	at nextflow.cli.Launcher.run(Launcher.groovy:480)
+	at nextflow.cli.Launcher.main(Launcher.groovy:639)

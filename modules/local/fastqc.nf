@@ -4,7 +4,7 @@
 
 process FASTQC {
 
-	publishDir "$params.output/fastqc", mode: 'copy'
+	publishDir "${params.output}/fastqc", mode: 'copy'
 	
 	input:
 	    file fastq 

@@ -17,10 +17,9 @@ Set it up using the instructions [here](https://help.tower.nf/22.4/getting-start
 <br>
 <br>
 <br>
-#### <b>Delete Everything Above</b>
 
 # Template README
-#### <b>Delete Everything Above</b>
+# <b>Delete Everything Above</b>
 
 # <PIPELINE NAME>
 ## Introduction 
@@ -35,17 +34,17 @@ This pipeline can be run using each of the following container methods
 
 
 ## Setup
-Singularity
+##### Singularity
 ```
 sudo singularity build singularity/<name of output container> <dockerfile>
 ```
 
-Docker
+##### Docker
 ```
 docker build . -t pipeline-image
 ```
 
-Conda 
+##### Conda 
 Create a conda definition yaml file [eg. here](conda/example.yml)
 
 ## Usage
@@ -56,10 +55,10 @@ nextflow run main.nf
 
 Run with all the frills
 ```
-bash run-w-frills <params-file.config> <profile name from nextflow.config>
+bash scripts/run-w-frills <params-file> <profile name from nextflow.config>
 ```
 Example
 ```
-bash run-w-frills example_parameters.yml docker
+bash scripts/run-w-frills example_parameters.yml standard
 ```
 

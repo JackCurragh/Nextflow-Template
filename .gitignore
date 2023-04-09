@@ -8,3 +8,6 @@ data/
 .*.swo
 *.pyc
 *.pyo
+*.html
+*.zip
+singularity/*

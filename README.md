@@ -40,16 +40,27 @@ This pipeline can be run using each of the following container methods
 ## Setup
 ##### Singularity
 ```
-sudo singularity build singularity/<name of output container> <dockerfile>
+sudo singularity build singularity/pipeline Singularity
+```
+Then as the profile `singularity` specifies `container = 'singularity/pipeline'` use the following to execute:
+```
+nextflow run main.nf -profile singularity
 ```
 
 ##### Docker
 ```
 docker build . -t pipeline-image
 ```
+Then as the profile `docker` specifies `container = 'pipeline-image:latest'` use the following to execute:
+```
+nextflow run main.nf -profile docker
+```
 
 ##### Conda 
 Create a conda definition yaml file [eg. here](conda/example.yml)
+```
+nextflow run main.nf -profile conda
+```
 
 ## Usage
 Call the pipeline directly

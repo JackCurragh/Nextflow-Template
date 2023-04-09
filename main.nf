@@ -43,8 +43,6 @@ workflow {
                         .ifEmpty { exit 1, "No fastq files found in ${params.input_dir}" }
 
     /// Run the subworkflow
-    // show fastq_ch
-    println '$params.input_dir/*.fastq.gz'
     quality_control(fastq_ch)
 }
 

@@ -14,4 +14,4 @@ RUN wget https://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.
     ln -s /FastQC/fastqc /usr/local/bin/fastqc
 
 # Set the default command
-CMD ["fastqc"]
+CMD ["ls"]

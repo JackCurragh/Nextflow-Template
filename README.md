@@ -17,9 +17,10 @@ Set it up using the instructions [here](https://help.tower.nf/22.4/getting-start
 <br>
 <br>
 <br>
-
-# Template README
-# <b>Delete Everything Above</b>
+# ||=====================================||
+# ||   Template README                   ||
+# ||   <b>Delete Everything Above</b>    ||
+# ||=====================================||
 
 # <PIPELINE NAME>
 ## Introduction 

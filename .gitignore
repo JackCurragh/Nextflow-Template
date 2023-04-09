@@ -1,0 +1,10 @@
+.nextflow.log*
+.nextflow/
+runInfo/
+results/
+work/
+NOTES
+guides/
+.vscode/
+report.html*
+data/

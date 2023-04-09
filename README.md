@@ -62,6 +62,6 @@ bash run-w-frills <params-file.config> <profile name from nextflow.config>
 ```
 Example
 ```
-bash run-w-frills params.config docker
+bash run-w-frills example_parameters.yml docker
 ```
 

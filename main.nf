@@ -4,19 +4,19 @@
 nextflow.enable.dsl=2
 
 /// Import modules and subworkflows
-include { quality_control } from './subworkflows/quality_control.nf'
+include { quality_control } from './subworkflows/local/quality_control.nf'
 
 // Log the parameters
 log.info """\
 
 =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-||                        INSERT PIPELINE NAME                             ||
+||                        INSERT PIPELINE NAME                             
 =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-||  Parameters                                                             ||
+||  Parameters                                                             
 =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-||  input_dir   : ${params.input_dir}                                      ||
-||  outDir      : ${params.outDir}                                         ||
-||  workDir     : ${workflow.workDir}                                      ||
+||  input_dir   : ${params.input_dir}                                     
+||  outDir      : ${params.output_dir}                                        
+||  workDir     : ${workflow.workDir}                                     
 =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
 
 """
@@ -37,11 +37,14 @@ def help() {
 }
 
 /// Define the main workflow
-workflow main {
+workflow {
     /// Define the input channels
-    fastq_ch = Channel.fromPath('$params.input_dir/*.fastq.gz')
+    fastq_ch = Channel.fromPath("${params.input_dir}/*.fastq.gz")
+                        .ifEmpty { exit 1, "No fastq files found in ${params.input_dir}" }
 
     /// Run the subworkflow
+    // show fastq_ch
+    println '$params.input_dir/*.fastq.gz'
     quality_control(fastq_ch)
 }
 

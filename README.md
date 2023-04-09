@@ -24,6 +24,8 @@ Set it up using the instructions [here](https://help.tower.nf/22.4/getting-start
 # <PIPELINE NAME>
 ## Introduction 
 
+[Describe here what this pipeline does]
+
 ## Requirements 
 This pipeline can be run using each of the following container methods
 | Method      | Instructions                                                                                   |

@@ -14,13 +14,13 @@ if [[ -z "${TOWER_ACCESS_TOKEN}" ]]; then
         -resume \
         -with-report report.html \
         -profile $profile \
-        -params-file $params
+        -c $params
 else
     nextflow run main.nf \
         -resume \
         -with-report report.html \
         -profile $profile \
-        -params-file $params \
+        -c $params \
         -with-tower
 fi
 
